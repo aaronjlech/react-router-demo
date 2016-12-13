@@ -1,16 +1,14 @@
 A simple project boiler-plate
 
+for compiling ES6, SASS etc....
+
 
 
 To setup Execute in terminal:
 ```
 npm install
 ```
-Start Dev Server:
+Start Dev Server
 ```
-npm start
-```
-Start Compiler:
-```
-npm run compile
+npm run go
 ```
