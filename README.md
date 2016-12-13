@@ -12,3 +12,9 @@ Start Dev Server
 ```
 npm run go
 ```
+
+SERVER PORT
+```
+localhost:3000
+```
+
