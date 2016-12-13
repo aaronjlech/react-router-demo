@@ -9,3 +9,4 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('app-container')
   );
 });
+console.log("whhattt")

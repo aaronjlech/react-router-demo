@@ -2,14 +2,13 @@ A simple project boiler-plate
 
 
 
-
 To setup Execute in terminal:
 ```
 npm install
 ```
 Start Dev Server:
 ```
-npm Start
+npm start
 ```
 Start Compiler:
 ```
