@@ -1,20 +1,23 @@
-A simple project boiler-plate
+#A simple project boiler-plate
 
 for compiling ES6, SASS etc....
 
 
 
-To setup Execute in terminal:
+#To setup Execute in terminal:
 ```
 npm install
 ```
-Start Dev Server
+#Start Dev Server
 ```
 npm run go
 ```
 
-SERVER PORT
+#SERVER PORT
 ```
 localhost:3000
 ```
-
+#Compile JS for production 
+```
+npm run compile
+```
