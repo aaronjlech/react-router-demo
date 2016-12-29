@@ -6,7 +6,7 @@
   "scripts": {
     "compile": "webpack",
     "start": "node server.js",
-    "go": "npm start && npm run watch",
+    "go": "npm run go && npm start",
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "npm run watch-css && echo '\n\n===== scss files in src-client/, writing changes to public/ =====\n\n'&",
     "watch-css": "./node_modules/.bin/node-sass -w --output-style compressed src/styles/styles.scss public/css/style.css&"
