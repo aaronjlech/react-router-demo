@@ -15,4 +15,4 @@ const App = React.createClass({
 })
 
 
-ReactDOM.render(<App/>, document.querySelector("#app-container");
+ReactDOM.render(<App/>, document.querySelector("#app-container"));
