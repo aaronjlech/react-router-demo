@@ -10,12 +10,16 @@ export default class UserThumbnail extends Component{
       let { name, login, picture } = this.props.user
 
       return(
+
          <div className="col-sm-6 col-md-3">
             <div className="thumbnail text-center" >
              {/* <div className=" thumbnail"> */}
              <div className="caption text-center">
                 <img src={picture.large} alt="..."/>
-                  <h3>{name.first}</h3>
+                <div>
+                   <h3>{name.first}</h3>
+
+                </div>
                   <h4>{login.username}</h4>
                <p>...</p>
                <Link to={`/send-message/${login.username}`}><button className="btn btn-default">Send Message</button></Link>
