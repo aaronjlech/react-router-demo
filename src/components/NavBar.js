@@ -32,11 +32,13 @@ export default class NavBar extends Component{
       }
    }
    render(){
-      
+
       return(
          <nav className="navbar navbar-default">
            <div className="container">
+
              <div className="navbar-header">
+
                <button type="button"
                   onClick={this.showDropDown.bind(this)}
                   className="navbar-toggle collapsed"
@@ -45,16 +47,26 @@ export default class NavBar extends Component{
                  <span className="icon-bar"></span>
                  <span className="icon-bar"></span>
                </button>
-               <Link className="navbar-brand" to="/">My Friend's List</Link>
+               <Link className="navbar-brand" to="/"><span>FakeBook</span></Link>
              </div>
              <div className={this.state.dropDownMobile} id="bs-example-navbar-collapse-1">
 
                <ul className="nav navbar-nav navbar-right">
-                  <ul className="nav navbar-nav">
-                    <li className="active"><Link to="/view/single">Hello <span className="sr-only">(current)</span></Link></li>
-                    <li><a href="#">Link</a></li>
-                    <li className={this.state.dropDown}>
-                      <a href="#" className="dropdown-toggle" role="button" data-toggle="desktop" onClick={this.showDropDown.bind(this)}>Dropdown <span className="caret"></span></a>
+
+                  <ul className="nav navbar-nav nav-pills">
+
+                    <li>
+                       <Link to= "/show/friend-requests">
+                          <span>Friend Requests</span> <span className="badge">0</span>
+                       </Link>
+                    </li>
+                    <li>
+                       <Link to= "/show/messages">
+                             <span>Messages <span className="badge">0</span></span>
+                       </Link>
+                    </li>
+                    {/* <li className={this.state.dropDown}>
+                      <a href="#" className="dropdown-toggle" role="button" data-toggle="desktop" onClick={this.showDropDown.bind(this)}>Menu <span className="caret"></span></a>
                       <ul className="dropdown-menu active" role="menu">
                         <li><a href="#">Action</a></li>
                         <li><a href="#">Another action</a></li>
@@ -64,8 +76,19 @@ export default class NavBar extends Component{
                         <li className="divider"></li>
                         <li><a href="#">One more separated link</a></li>
                       </ul>
+                    </li> */}
+                    <li>
+                       <Link className="nav-img">
+                          <img src={this.props.currentUser.picture.thumbnail} alt=""/>
+                        </Link>
                     </li>
-                  </ul>               </ul>
+                    <li>
+                        <Link className="nav-username">
+                          <span>HI! {this.props.currentUser.login.username}</span>
+                        </Link>
+                    </li>
+                  </ul>
+                 </ul>
              </div>
            </div>
          </nav>

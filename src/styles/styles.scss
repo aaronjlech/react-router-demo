@@ -1,6 +1,6 @@
 
 body{
-
+   font-family: 'Lato', sans-serif;
 }
 
 .navbar{
@@ -9,6 +9,21 @@ body{
    top: 0;
    left: 0;
    width: 100%;
+   img{
+      border-radius: 50%;
+
+   }
+   .nav-img{
+      padding: 0;
+      margin-left: 5px;
+   }
+   .nav-username{
+      font-size: 20px;
+      text-transform: capitalize;
+      &:hover{
+         background-color: inherit !important;
+      }
+   }
 }
 .row{
    margin: 0;
@@ -23,12 +38,36 @@ body{
 
    position: relative;
    &:hover{
-      top: 2px;
+      top: 1px;
    }
 }
 
 .thumbnail{
    img{
       border-radius: 50%;
+
    }
+}
+.navbar-brand{
+   opacity: .8;
+   text-: 1px solid gray;
+   font-size: 2em;
+   font-family: 'Poiret One', cursive;
+   transition: all .2s;
+   &:hover{
+      font-size: 2.1em;
+      opacity: 1;
+   }
+}
+.nav-pills{
+   li{
+      a{
+         transition: all .5s;
+
+      }
+      // &:hover{
+      //
+      // }
+   }
+
 }

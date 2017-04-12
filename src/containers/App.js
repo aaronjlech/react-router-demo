@@ -1,34 +1,26 @@
 import React from 'react';
 import axios from 'axios';
-
-
-
 // WRAPPER COMPONENT THAT PASSES STATE AS PROPS TO ALL CHILDREN COMPONENTS
 const App = React.createClass({
 
    getInitialState: function(){
       return {
          currentUser: {},
-         users: []
+         users: [],
+         messages: [],
+         friendRequests: []
+
       }
    },
    componentDidMount(){
-      function getAllUsers(){
-         return axios.get('https://randomuser.me/api/?results=100')
-      }
-      function getCurrent(){
-         return axios.get('https://randomuser.me/api/?results=1')
-      }
-      axios.all([getCurrent(), getAllUsers()])
+      const getAllUsers = () => axios.get('https://randomuser.me/api/?results=100')
+      const getCurrent= ()=> axios.get('https://randomuser.me/api/?results=1')
+
       axios.all([getCurrent(), getAllUsers()])
       .then(axios.spread((current, all)=> {
          this.setState({currentUser: current.data.results[0], users: all.data.results})
         }));
 
-      // .then((serverRes)=>{
-      //    console.log(serverRes.data.results)
-      //    this.setState({ users: serverRes.data.results })
-      // })
    },
 
 

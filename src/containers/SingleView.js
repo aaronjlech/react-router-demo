@@ -11,9 +11,7 @@ export default class SingleView extends Component{
 
 
    render(){
-      console.log(this.props, 'heyy')
       let selectedUser = this.props.users.filter((user, i)=>{
-         console.log(this.props.params.id, i)
          if(this.props.params.userName === user.login.username){
             return true
          }
@@ -22,7 +20,11 @@ export default class SingleView extends Component{
       return(
          <div className="">
             <MainNav {...this.props}/>
-            <h1>Hello {selectedUser.name.first}</h1>
+            <div className="fluid-container">
+               <div className="row">
+
+               </div>
+            </div>
          </div>
       )
    }
