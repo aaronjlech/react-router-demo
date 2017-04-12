@@ -71,3 +71,16 @@ body{
    }
 
 }
+.btn-group-justified{
+   text-align: center;
+   .btn{
+      width: 20%;
+      a{
+         color: #fff;
+         &:hover{
+            text-decoration: none;
+         }
+      }
+
+   }
+}

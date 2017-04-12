@@ -21,7 +21,6 @@ export default class UserThumbnail extends Component{
                <Link to={`/send-message/${login.username}`}><button className="btn btn-default">Send Message</button></Link>
                <Link to={`/view/${login.username}`}><button className="btn btn-default">View Profile</button></Link>
             </div>
-
          </div>
       </div>
       )
